@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://kit.fontawesome.com/609d6bcff9.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
 </head>
 <body>
+    <header>
+      <p class="logo">snap</p>
 
-  Features
-  Company
-  Careers
-  About
+      <nav>
 
-  Login
-  Register
+        <!--Features section start-->
+        <button class="nav-list-btn">Features
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="links">
+          <li><a href="#" class="link"> <img class="link-icon" src="images/icon-todo.svg" alt="notepad icon"> Todo List</a></li>
+          <li><a href="#" class="link"> <img class="link-icon" src="images/icon-calendar.svg" alt="notepad icon">Calendar</a></li>
+          <li><a href="#" class="link"> <img class="link-icon" src="images/icon-reminders.svg" alt="notepad icon">Reminders</a></li>
+          <li><a href="#" class="link"> <img class="link-icon" src="images/icon-planning.svg" alt="notepad icon">Planning</a></li>
+        </ul>
+        <!--Features section end-->
+        <!--Company section start-->
+        <button class="nav-list-btn">Company
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="links">
+            <li><a href="#" class="link">History</a></li>
+            <li><a href="#" class="link">Our Team</a></li>
+            <li><a href="#" class="link">Blog</a></li>
+        </ul>
+        <!--Company section end-->
+        <a href="#" class="link careers">Careers</a>
+        <a href="#" class="link about">About</a>
+        <button class="nav-login">Login</button>
+        <button class="nav-register">Register</button>
+      </nav>
 
-  Make remote work
+    
+      <button class="nav-open"><img src="images/icon-menu.svg" alt=""></button>
+    </header>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+    <main>
+        <img class="main-img" src="images/image-hero-mobile.png" alt="guy typing on a laptop in the worst confort way">
+        <h1 class="main-title">Make remote work</h1>
+        <p class="main-subtitle">Get your dream team in sync. no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <a class="main-link" href="#">Learn more</a>
+    </main>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <footer>
+        <div class="footer-clients">
+            <img src="images/client-databiz.svg" alt="databiz logo" class="client">
+            <img src="images/client-audiophile.svg" alt="audiophile logo" class="client">
+            <img src="images/client-meet.svg" alt="meet logo" class="client">
+            <img src="images/client-maker.svg" alt="maker logo" class="client">
+        </div>
+    </footer>
 </body>
 </html>

@@ -86,8 +86,8 @@ nav{
     left: 40%;
     z-index: 100;
     background-color: #fff;
-    transform: translateX(0%);
-    transition: transform 500ms ease-in-out;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
 }
 
 nav a,
@@ -233,29 +233,22 @@ footer{
 
 @media (min-width:650px){
     main{
+        display: grid;
         grid-template-columns: 300px 300px;
-        
+        grid-template-areas:
+        "title img"
+        "subtitle img"
+        "link img"
+        "footer img";
     }
 
-    .main-title{
-        grid-row: 1;
-        grid-column: 1;
-    }
+    .main-title{grid-area: title;}
+    .main-subtitle{grid-area: subtitle;}
+    .main-link{grid-area: link;}
+    footer{grid-area: footer;}
+    .main-img{grid-area: img;}
 
-    .main-subtitle{
-        grid-row: 2;
-        grid-column: 1;
-    }
-
-    .main-link{
-        grid-row: 3;
-        grid-column: 1;
-    }
-
-    .main-img{
-        width: 50%;
-        grid-column: 2;
-        grid-row-end: 1/-1;
-    }
 }
+
+
 

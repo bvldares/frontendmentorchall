@@ -5,8 +5,6 @@
 }
 
 
-
-
 body{
     font-family: 'Epilogue', sans-serif;
     text-align: center;
@@ -87,6 +85,14 @@ nav{
 
 }
 
+
+.nav-list-btn,
+.link,
+.nav-login,
+.nav-register{
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .nav-list-btn{
     font-size: 1.2rem;
     background-color: #fff;
@@ -97,20 +103,19 @@ nav{
     font-family: 'Epilogue', sans-serif;
 }
 
-
-
 .nav-list-btn i{
     margin-left: .5em;
 }
 
+
+
 .links{
+    display: none;
     padding: 0 1em;
     margin: 0;
 }
 
-.link{
-    color: rgba(0, 0, 0, .7);
-}
+
 
 .links li{
     list-style: none;
@@ -128,6 +133,41 @@ nav{
     margin-right: .5em;
 }
 
+
+/*Button in nav*/
+
+.nav-login,
+.nav-register{
+    font-family: 'Epilogue', sans-serif;
+    opacity: 70%;
+    margin-top: 2em;
+    padding: .8em 0;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid;
+    background-color:#fff;
+    cursor: pointer;
+}
+
+.nav-login:active,
+.nav-login:hover,
+.nav-register:hover,
+.nav-register:active,
+.nav-list-btn:hover,
+.nav-list-btn:active,
+.link:active,
+.link:hover{
+    color: rgba(0, 0, 0, 1);
+}
+
+.nav-login{
+    border-color: transparent;
+}
+
+.nav-register{
+    margin-top: 1em;
+    border-color: darkgray;
+}
 
 
 

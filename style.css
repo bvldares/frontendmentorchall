@@ -44,6 +44,9 @@ a{
     border-radius: 10px;
 }
 
+.main-img{
+    content: url("images/image-hero-mobile.png");
+}
 
 
 /*layout NAV*/
@@ -191,7 +194,7 @@ main{
 }
 
 .main-title{
-    white-space: nowrap;
+
     font-size: 2.1rem;
     margin-top: 1em;
 }
@@ -232,10 +235,122 @@ footer{
 }
 
 @media (min-width:650px){
+
     main{
+        margin:0 auto;
+        width: 90vw;
+        max-width: 1200px;
         display: grid;
-        grid-template-columns: 300px 300px;
+        grid-template-columns: minmax(min-content, 50%) minmax(45%, 50%);
+        grid-template-rows:100px 100px 50px 200px ;
+        text-align: left;
         grid-template-areas:
+        "title img"
+        "subtitle img"
+        "link img"
+        "footer footer"   
+    }
+
+    .main-title{
+        grid-area: title;
+        font-size: 3.5vw;
+        margin-top: 0;
+        align-self: flex-end;
+    }
+
+    .main-title span::after{
+        content: "\a";
+        white-space: pre;
+    }
+    .main-subtitle{
+        grid-area: subtitle;
+        font-size: 1.5vw;
+    }
+    .main-link{
+        width: fit-content;
+        font-size: 1.5vw;
+        grid-area: link;
+        align-self: flex-start;
+    }
+    footer{
+        grid-area: footer;
+    }
+
+    .footer-clients{
+        padding: 0;
+    }
+    
+    
+    .main-img{ 
+        grid-area: img;
+    }
+
+
+    nav{
+        left: 70%;
+    }
+}
+
+
+
+@media (min-width:850px){
+       
+    header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+
+    nav{
+        font-size: 1rem;
+        padding: 1.2rem;
+        width: 85%;
+        position: static;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        transform: translateX(0%);
+    }
+
+    .nav-open{
+        display: none;
+    }
+
+    .nav-list-btn,
+    .careers,
+    .about{
+        margin-right: 2em;
+        margin-bottom: 0;
+    }
+
+    .nav-list-btn{
+        display: flex;
+    }
+
+
+
+
+    .auth{
+        display: flex;
+        margin-left: auto;
+    }
+
+    .nav-register,
+    .nav-login{
+        width: 100px;
+        margin-top: 0;
+        font-size: 1rem;
+    }
+
+    main{
+        margin:auto;
+        height: 80vh;
+        grid-template-columns: minmax(min-content, 50%) minmax(45%, 50%);
+        text-align: left;
+        grid-template-areas:
+        ".. img"
+        "title img"
         "title img"
         "subtitle img"
         "link img"
@@ -243,12 +358,20 @@ footer{
     }
 
     .main-title{grid-area: title;}
-    .main-subtitle{grid-area: subtitle;}
-    .main-link{grid-area: link;}
+    .main-subtitle{
+        margin: 0;
+        grid-area: subtitle;
+    }
+    .main-link{
+        margin: 0;
+        grid-area: link;
+    }
     footer{grid-area: footer;}
-    .main-img{grid-area: img;}
+    
+    
+    .main-img{
+        grid-area: img;
+        content: url("images/image-hero-desktop.png");
+    }
 
 }
-
-
-

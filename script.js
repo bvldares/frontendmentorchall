@@ -15,6 +15,7 @@ for(let i=0; i<dropdown.length; i++){
 
 
 document.querySelector(".nav-open").addEventListener("click", function(){
+
     if(navBar.style.transform === "translateX(100%)"){
         navBar.style.transform = "translateX(0%)"
     }else{
@@ -22,8 +23,3 @@ document.querySelector(".nav-open").addEventListener("click", function(){
     }
 })
 
-let media = window.matchMedia("(min-width:650px)")
-
-if(media.matches){
-    document.querySelector(".main-img").src = "images/image-hero-desktop.png"
-}

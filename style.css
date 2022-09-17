@@ -54,6 +54,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .logo-company,
@@ -187,10 +192,10 @@ nav a:active,
 /*Stilyng the main content*/
 
 main{
-    margin-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 4em;
 }
 
 .main-title{
@@ -223,7 +228,7 @@ footer{
 
 .footer-clients{
     padding-top: 2.5em;
-    width: 90%;
+    width: 97%;
     display: flex;
     justify-content: space-between;
 
@@ -237,18 +242,18 @@ footer{
 @media (min-width:650px){
 
     main{
-        margin:0 auto;
+        margin-top: 5em;
+        margin-left:auto;
+        margin-right: auto;
         width: 90vw;
         max-width: 1200px;
         display: grid;
         grid-template-columns: minmax(min-content, 50%) minmax(45%, 50%);
-        grid-template-rows:100px 100px 50px 200px ;
         text-align: left;
         grid-template-areas:
-        "title img"
-        "subtitle img"
-        "link img"
-        "footer footer"   
+        "img img"
+        "title footer"
+        "subtitle footer"
     }
 
     .main-title{
@@ -271,6 +276,9 @@ footer{
         font-size: 1.5vw;
         grid-area: link;
         align-self: flex-start;
+        grid-row: -1;
+        grid-column: 1/-1;
+
     }
     footer{
         grid-area: footer;
@@ -278,6 +286,34 @@ footer{
 
     .footer-clients{
         padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .client-one{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .client-two{
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    .client-tre{
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .client-four{
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .client{
+        width: 80%;
+        object-fit: contain;
     }
     
     
@@ -311,6 +347,7 @@ footer{
         justify-content: flex-start;
         align-items: center;
         transform: translateX(0%);
+        z-index: 4;
     }
 
     .nav-open{
@@ -328,9 +365,6 @@ footer{
         display: flex;
     }
 
-
-
-
     .auth{
         display: flex;
         margin-left: auto;
@@ -344,13 +378,13 @@ footer{
     }
 
     main{
-        margin:auto;
-        height: 80vh;
-        grid-template-columns: minmax(min-content, 50%) minmax(45%, 50%);
+        margin: 7em auto 7em auto;
+        height: 60vh;
+        grid-template-columns: minmax(min-content, 700px) minmax(45%, 50%);
+        grid-template-rows:min-content minmax(min-content, 20%);
+        column-gap: 3em;
         text-align: left;
         grid-template-areas:
-        ".. img"
-        "title img"
         "title img"
         "subtitle img"
         "link img"
@@ -367,11 +401,21 @@ footer{
         grid-area: link;
     }
     footer{grid-area: footer;}
+
+    .footer-clients{
+        display: flex;
+    }
+
+    .client{
+        width:fit-content;
+    }
     
     
     .main-img{
         grid-area: img;
         content: url("images/image-hero-desktop.png");
+        width: 100%;
+        max-width:90%;
     }
 
 }
